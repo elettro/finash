@@ -1,1 +1,284 @@
 
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - Finash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                            "outline": "#6d7a76",
+                            "error": "#ba1a1a",
+                            "tertiary": "#4b635e",
+                            "inverse-surface": "#293040",
+                            "surface-dim": "#d3daef",
+                            "surface-container": "#e9edff",
+                            "surface-container-high": "#e1e8fd",
+                            "surface-tint": "#006b5c",
+                            "on-surface-variant": "#3d4946",
+                            "on-secondary-fixed": "#002201",
+                            "surface-container-highest": "#dce2f7",
+                            "on-primary-fixed-variant": "#005045",
+                            "surface": "#f9f9ff",
+                            "primary-container": "#2bb19b",
+                            "surface-container-low": "#f1f3ff",
+                            "on-secondary": "#ffffff",
+                            "outline-variant": "#bccac5",
+                            "inverse-on-surface": "#edf0ff",
+                            "on-surface": "#141b2b",
+                            "surface-variant": "#dce2f7",
+                            "on-secondary-fixed-variant": "#005307",
+                            "primary-fixed": "#7ef7de",
+                            "secondary-fixed-dim": "#6cdf61",
+                            "surface-bright": "#f9f9ff",
+                            "tertiary-container": "#8aa49e",
+                            "inverse-primary": "#5fdac3",
+                            "on-primary": "#ffffff",
+                            "primary-fixed-dim": "#5fdac3",
+                            "on-tertiary-fixed": "#071f1c",
+                            "on-tertiary-container": "#223a36",
+                            "on-secondary-container": "#00750f",
+                            "on-primary-fixed": "#00201b",
+                            "surface-container-lowest": "#ffffff",
+                            "on-background": "#141b2b",
+                            "secondary": "#006e0d",
+                            "on-tertiary": "#ffffff",
+                            "secondary-fixed": "#88fc7a",
+                            "primary": "#006b5c",
+                            "error-container": "#ffdad6",
+                            "tertiary-fixed": "#cde8e2",
+                            "on-error": "#ffffff",
+                            "background": "#f9f9ff",
+                            "on-primary-container": "#003d34",
+                            "on-tertiary-fixed-variant": "#334b47",
+                            "secondary-container": "#88fc7a",
+                            "tertiary-fixed-dim": "#b2ccc6",
+                            "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                            "DEFAULT": "0.25rem",
+                            "lg": "0.5rem",
+                            "xl": "0.75rem",
+                            "full": "9999px"
+                    },
+                    "spacing": {
+                            "gutter": "24px",
+                            "stack-sm": "12px",
+                            "container-max": "1280px",
+                            "stack-md": "24px",
+                            "base": "8px",
+                            "margin-page": "40px",
+                            "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                            "label-sm": ["Inter"],
+                            "body-md": ["Inter"],
+                            "display-xl": ["Plus Jakarta Sans"],
+                            "headline-lg": ["Plus Jakarta Sans"],
+                            "label-md": ["Inter"],
+                            "headline-md": ["Plus Jakarta Sans"],
+                            "display-lg": ["Plus Jakarta Sans"],
+                            "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                            "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                            "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                            "display-xl": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                            "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600"}],
+                            "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                            "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                            "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(249, 250, 251, 1) 100%);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #F3F4F6;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center h-20 px-10 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-primary dark:text-inverse-primary">Finash</div>
+<div class="hidden md:flex space-x-8 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:opacity-90 transition-all duration-200 active:scale-95" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Contact</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Sign In</a>
+</div>
+<div class="hidden md:block">
+<button class="bg-primary-container text-on-primary font-label-md px-6 py-2 rounded-lg hover:opacity-90 transition-all duration-200 active:scale-95 bg-gradient-to-b from-primary-container/95 to-primary-container">Register</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="py-24 px-margin-page max-w-container-max mx-auto text-center">
+<h1 class="font-display-xl text-display-xl text-on-background mb-stack-md">Our Services</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Precision meets modern agility. We offer a comprehensive suite of digital solutions designed to elevate your business, combining cutting-edge technology with strategic expertise to drive measurable growth.</p>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section class="px-margin-page max-w-container-max mx-auto pb-stack-lg">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">web</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">Website Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Crafting premium, high-performance web experiences tailored for modern corporate and SaaS environments. Focus on clarity, conversion, and dynamic stability.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">AI Automation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Streamline operations and enhance decision-making with intelligent, scalable AI solutions. Turning complex data into actionable, automated agility.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">Digital Marketing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Data-driven marketing strategies designed to acquire and retain high-value users. Precision targeting meets compelling creative execution.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 4 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">edit_document</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">Content Production</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">High-end content creation that establishes authority. From deep-dive whitepapers to engaging multimedia assets that resonate with your sophisticated audience.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 5 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">storefront</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">E-Commerce Support</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Robust infrastructure and strategic guidance to scale your online sales. Ensuring seamless transactions and exceptional customer experiences.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 6 -->
+<div class="glass-card rounded-[16px] p-8 flex flex-col items-start transition-transform hover:-translate-y-1 duration-300">
+<div class="w-12 h-12 rounded-xl bg-surface-container flex items-center justify-center mb-stack-md text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-stack-sm text-on-surface">Consulting &amp; Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-stack-md flex-grow">Strategic advisory services rooted in financial precision. We help you navigate complex challenges and identify avenues for sustainable growth.</p>
+<a class="font-label-md text-label-md text-primary hover:opacity-80 transition-opacity flex items-center gap-2 mt-auto" href="#">
+                    Learn More <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Why Us Section (Asymmetric Layout with Image) -->
+<section class="bg-surface-container-low py-stack-lg my-stack-lg">
+<div class="px-margin-page max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 lg:order-1 relative rounded-[16px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] aspect-[0.72] w-full max-w-[500px] mx-auto">
+<img alt="Placeholder Image" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uiuRto8FBd9fjcv63zimsiTWCmui41fD3ywCvLWLQzfTthV1bhzsiARqvaLP4gJlEqVGtbAfyZ_Rk6pwvII5GNoO2rvv4CTkN3ca_hW-4ZSNng9ut1Ut290gtHfCF2DYuk_7vKeoyQtKXKJCKuKrgy7Asp6FCXa0q3lgS6eytVHh2pCNejyVW9msWEZIxEWes7lVyNBqQehELxqQSsQ6WEz0pAmqmzJ1pP3Ng9whzjTKyPnsrVrN5oP87OM7pP-K07YcpSCdc6J9gc"/>
+</div>
+<div class="order-1 lg:order-2 space-y-stack-md">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-background mb-stack-sm">Why Partner With Us?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We don't just deliver services; we build foundations for dynamic stability. Our approach is grounded in these core principles.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-stack-md">
+<div class="flex gap-4">
+<div class="mt-1 text-primary"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">check_circle</span></div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1">Clear planning</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Structured roadmaps ensuring alignment and transparency from day one.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 text-primary"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bolt</span></div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1">Fast execution</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Agile methodologies that drive rapid deployment without sacrificing quality.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 text-primary"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">architecture</span></div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1">Modern tools</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Leveraging state-of-the-art tech stacks for robust, future-proof solutions.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="mt-1 text-primary"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">bar_chart</span></div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface mb-1">Measurable results</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Data-backed performance tracking to ensure every action drives ROI.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Bottom CTA -->
+<section class="py-stack-lg px-margin-page max-w-container-max mx-auto text-center">
+<div class="glass-card rounded-[24px] p-12 bg-surface">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-stack-sm">Ready to get started?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-md max-w-2xl mx-auto">Take the next step towards operational excellence. Register now or get in touch with our expert team to discuss your specific needs.</p>
+<div class="flex flex-col sm:flex-row justify-center items-center gap-4">
+<button class="bg-primary-container text-on-primary font-label-md px-8 py-3 rounded-lg hover:opacity-90 transition-all duration-200 active:scale-95 bg-gradient-to-b from-primary-container/95 to-primary-container shadow-sm w-full sm:w-auto">Register</button>
+<button class="border border-outline-variant text-on-surface font-label-md px-8 py-3 rounded-lg hover:bg-surface-container-low transition-colors duration-200 active:scale-95 w-full sm:w-auto">Contact Us</button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 bg-surface-container dark:bg-surface-container-low border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-margin-page max-w-container-max mx-auto">
+<div class="flex flex-col items-start">
+<div class="text-headline-md font-headline-md text-primary dark:text-inverse-primary mb-4">Finash</div>
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Finash. Precision meets modern agility.</p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-on-surface">Navigation</h4>
+<div class="flex flex-col space-y-2 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:underline" href="#">Home</a>
+<a class="text-primary dark:text-primary-fixed-dim font-bold hover:underline transition-all" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:underline" href="#">Contact</a>
+</div>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-on-surface">Legal</h4>
+<div class="flex flex-col space-y-2 font-body-md text-body-md">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
