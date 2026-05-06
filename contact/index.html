@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact Us - Finash</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Plus+Jakarta+Sans:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#6d7a76",
+                        "error": "#ba1a1a",
+                        "tertiary": "#4b635e",
+                        "inverse-surface": "#293040",
+                        "surface-dim": "#d3daef",
+                        "surface-container": "#e9edff",
+                        "surface-container-high": "#e1e8fd",
+                        "surface-tint": "#006b5c",
+                        "on-surface-variant": "#3d4946",
+                        "on-secondary-fixed": "#002201",
+                        "surface-container-highest": "#dce2f7",
+                        "on-primary-fixed-variant": "#005045",
+                        "surface": "#f9f9ff",
+                        "primary-container": "#2bb19b",
+                        "surface-container-low": "#f1f3ff",
+                        "on-secondary": "#ffffff",
+                        "outline-variant": "#bccac5",
+                        "inverse-on-surface": "#edf0ff",
+                        "on-surface": "#141b2b",
+                        "surface-variant": "#dce2f7",
+                        "on-secondary-fixed-variant": "#005307",
+                        "primary-fixed": "#7ef7de",
+                        "secondary-fixed-dim": "#6cdf61",
+                        "surface-bright": "#f9f9ff",
+                        "tertiary-container": "#8aa49e",
+                        "inverse-primary": "#5fdac3",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#5fdac3",
+                        "on-tertiary-fixed": "#071f1c",
+                        "on-tertiary-container": "#223a36",
+                        "on-secondary-container": "#00750f",
+                        "on-primary-fixed": "#00201b",
+                        "surface-container-lowest": "#ffffff",
+                        "on-background": "#141b2b",
+                        "secondary": "#006e0d",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed": "#88fc7a",
+                        "primary": "#006b5c",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#cde8e2",
+                        "on-error": "#ffffff",
+                        "background": "#f9f9ff",
+                        "on-primary-container": "#003d34",
+                        "on-tertiary-fixed-variant": "#334b47",
+                        "secondary-container": "#88fc7a",
+                        "tertiary-fixed-dim": "#b2ccc6",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "stack-sm": "12px",
+                        "container-max": "1280px",
+                        "stack-md": "24px",
+                        "base": "8px",
+                        "margin-page": "40px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xl": ["64px", { "lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.02em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col pt-20">
+<!-- TopNavBar -->
+<header class="bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
+<div class="flex justify-between items-center h-20 px-10 max-w-container-max mx-auto">
+<div class="text-headline-md font-headline-md text-primary dark:text-inverse-primary">
+                Finash
+            </div>
+<nav class="hidden md:flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Services</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:opacity-90 transition-all duration-200" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="#">Sign In</a>
+</nav>
+<button class="bg-primary text-on-primary font-label-md text-label-md py-2 px-6 rounded-DEFAULT active:scale-95 transition-transform hover:opacity-90 duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.05)] bg-gradient-to-b from-white/5 to-transparent">
+                Register
+            </button>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto px-margin-page w-full py-stack-lg flex flex-col gap-stack-lg">
+<!-- Contact Section Two Column -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left: Info -->
+<div class="lg:col-span-5 flex flex-col gap-stack-md">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-background mb-base">Get in touch</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant">We're here to help you achieve financial precision. Reach out to our team of experts for personalized support.</p>
+</div>
+<div class="flex flex-col gap-stack-sm bg-surface-container-lowest p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-surface-variant">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">call</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Phone</p>
+<p class="font-body-md text-body-md text-on-surface">+1 (555) 123-4567</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">mail</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Email</p>
+<p class="font-body-md text-body-md text-on-surface">hello@finash.com</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">schedule</span>
+</div>
+<div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Business Hours</p>
+<p class="font-body-md text-body-md text-on-surface">Mon-Fri, 9am - 6pm EST</p>
+</div>
+</div>
+</div>
+<!-- Decorative Image / Map Placeholder -->
+<div class="w-full h-64 rounded-xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.05)] relative group">
+<img alt="Contact Canvas" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/ADBb0uiuRto8FBd9fjcv63zimsiTWCmui41fD3ywCvLWLQzfTthV1bhzsiARqvaLP4gJlEqVGtbAfyZ_Rk6pwvII5GNoO2rvv4CTkN3ca_hW-4ZSNng9ut1Ut290gtHfCF2DYuk_7vKeoyQtKXKJCKuKrgy7Asp6FCXa0q3lgS6eytVHh2pCNejyVW9msWEZIxEWes7lVyNBqQehELxqQSsQ6WEz0pAmqmzJ1pP3Ng9whzjTKyPnsrVrN5oP87OM7pP-K07YcpSCdc6J9gc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 to-transparent flex items-end p-6">
+<div class="flex items-center gap-2 text-on-primary">
+<span class="material-symbols-outlined text-on-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-md text-label-md">New York, NY</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Form -->
+<div class="lg:col-span-7 lg:col-start-6">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] p-8 border border-surface-variant">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-md">Send a Message</h2>
+<form class="flex flex-col gap-stack-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-sm">
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="name">Full Name</label>
+<input class="rounded-lg bg-surface-bright border-outline-variant text-on-surface font-body-md text-body-md px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" id="name" placeholder="John Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="email">Email Address</label>
+<input class="rounded-lg bg-surface-bright border-outline-variant text-on-surface font-body-md text-body-md px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" id="email" placeholder="john@company.com" type="email"/>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="phone">Phone Number</label>
+<input class="rounded-lg bg-surface-bright border-outline-variant text-on-surface font-body-md text-body-md px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all" id="phone" placeholder="+1 (555) 000-0000" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-sm text-label-sm text-on-surface-variant" for="message">Your Message</label>
+<textarea class="rounded-lg bg-surface-bright border-outline-variant text-on-surface font-body-md text-body-md px-4 py-3 focus:ring-2 focus:ring-primary-container focus:border-primary-container transition-all resize-none" id="message" placeholder="How can we help you?" rows="5"></textarea>
+</div>
+<button class="mt-4 bg-primary text-on-primary font-label-md text-label-md py-4 px-8 rounded-lg shadow-[0_10px_30px_rgba(0,0,0,0.05)] bg-gradient-to-b from-white/10 to-transparent hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Send Message</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="mt-stack-lg border-t border-surface-variant pt-stack-lg">
+<div class="text-center mb-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Frequently Asked Questions</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Quick answers to common inquiries.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">timer</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg">What is your typical response time?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">We aim to respond to all inquiries within 24 business hours. For urgent matters, please call our support line.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">support_agent</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg">Do you offer dedicated account managers?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Yes, enterprise clients are assigned a dedicated account manager to ensure personalized service and strategic guidance.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-xl shadow-[0_10px_30px_rgba(0,0,0,0.05)] border border-surface-variant flex flex-col gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary mb-2">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">public</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-lg">Do you support international clients?</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Absolutely. We provide services globally and our platform supports multiple currencies and regulatory frameworks.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container dark:bg-surface-container-low w-full py-16 border-t border-outline-variant mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-margin-page max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<span class="text-headline-md font-headline-md text-primary dark:text-inverse-primary">Finash</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision meets modern agility.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-label-md text-label-md text-on-surface mb-2">Navigation</h4>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:underline" href="#">Home</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:underline" href="#">Services</a>
+<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim font-bold hover:underline transition-all" href="#">Contact</a>
+</div>
+<div class="flex flex-col gap-2 md:items-end justify-end">
+<p class="font-body-md text-body-md text-on-surface-variant">© 2024 Finash. Precision meets modern agility.</p>
+</div>
+</div>
+</footer>
+</body></html>
