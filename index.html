@@ -252,8 +252,11 @@
 </div>
 <!-- Dashboard Preview Card -->
 <div class="relative bg-surface rounded-2xl border border-outline-variant/20 soft-shadow p-2 shadow-2xl h-[500px] overflow-hidden">
-<div class="h-full bg-surface-bright rounded-xl overflow-hidden">
-<img alt="Dashboard Interface" class="w-full h-full object-cover object-top" src="images/finash-homepage-how-it-works-global-payment-process-overview.png"/>
+<div class="relative h-full bg-surface-bright rounded-xl overflow-hidden" id="how-it-works-media">
+<img alt="Dashboard Interface" class="absolute inset-0 w-full h-full object-cover object-top z-10" id="how-it-works-loader" src="images/finash-homepage-how-it-works-global-payment-process-overview.png"/>
+<video aria-label="How it works walkthrough" class="w-full h-full object-cover object-top opacity-0 transition-opacity duration-500" id="how-it-works-video" loop muted playsinline preload="auto">
+<source src="videos/finash-homepage-how-it-works-global-payment-process-overview-720p.mp4" type="video/mp4"/>
+</video>
 </div>
 </div>
 </div>
@@ -381,4 +384,35 @@
             </p>
 </div>
 </footer>
+
+<script>
+  (function () {
+    const video = document.getElementById('how-it-works-video');
+    const loaderImage = document.getElementById('how-it-works-loader');
+
+    if (!video || !loaderImage) return;
+
+    const revealVideo = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        // If autoplay is blocked, keep the loader image in place as fallback.
+        return;
+      }
+
+      video.classList.remove('opacity-0');
+      loaderImage.classList.add('hidden');
+    };
+
+    video.addEventListener('loadeddata', revealVideo, { once: true });
+
+    video.addEventListener('error', () => {
+      video.classList.add('hidden');
+      loaderImage.classList.remove('hidden');
+    });
+
+    video.load();
+  })();
+</script>
+
 </body></html>
