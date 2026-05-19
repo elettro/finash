@@ -107,7 +107,22 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             border: 1px solid #F3F4F6;
         }
-    </style>
+
+        .carousel-track {
+            transition: transform 700ms cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform;
+        }
+        .carousel-slide {
+            flex: 0 0 100%;
+        }
+        .carousel-arrow {
+            background: rgba(20, 27, 43, 0.28);
+            backdrop-filter: blur(3px);
+        }
+        .carousel-arrow:hover {
+            background: rgba(20, 27, 43, 0.45);
+        }
+        </style>
 </head>
 <body class="bg-background text-on-background font-body-md pt-32">
 <!-- TopNavBar -->
@@ -126,8 +141,28 @@
 </div>
 </div>
 </nav>
+<!-- Services Carousel -->
+<section class="pt-24 px-margin-page max-w-container-max mx-auto">
+<div class="relative rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.15)]" id="servicesCarousel">
+<div class="flex carousel-track" id="carouselTrack">
+<img alt="Services carousel image 1" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (1).png"/>
+<img alt="Services carousel image 2" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (2).png"/>
+<img alt="Services carousel image 3" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (3).png"/>
+<img alt="Services carousel image 4" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (4).png"/>
+<img alt="Services carousel image 5" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (5).png"/>
+<img alt="Services carousel image 6" class="carousel-slide aspect-[16/9] w-full object-cover" src="../images/16x9-Carousel-Images- (6).png"/>
+</div>
+<button aria-label="Previous image" class="carousel-arrow absolute left-3 top-1/2 -translate-y-1/2 text-white rounded-full w-10 h-10 inline-flex items-center justify-center transition-colors" id="carouselPrev" type="button">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button aria-label="Next image" class="carousel-arrow absolute right-3 top-1/2 -translate-y-1/2 text-white rounded-full w-10 h-10 inline-flex items-center justify-center transition-colors" id="carouselNext" type="button">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</section>
+
 <!-- Hero Section -->
-<section class="py-24 px-margin-page max-w-container-max mx-auto text-center">
+<section class="py-20 px-margin-page max-w-container-max mx-auto text-center">
 <h1 class="font-display-xl text-display-xl text-on-background mb-stack-md">Our Services</h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Precision meets modern agility. We offer a comprehensive suite of digital solutions designed to elevate your business, combining cutting-edge technology with strategic expertise to drive measurable growth.</p>
 </section>
@@ -281,4 +316,80 @@
 </div>
 </div>
 </footer>
+
+<script>
+(() => {
+    const carousel = document.getElementById("servicesCarousel");
+    const track = document.getElementById("carouselTrack");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+
+    if (!carousel || !track || !prevBtn || !nextBtn) return;
+
+    const slides = Array.from(track.children);
+
+    if (slides.length === 0) return;
+
+    let index = 0;
+    let autoTimer;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
+
+    const updateSlide = () => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+    };
+
+    const goTo = (nextIndex) => {
+        index = (nextIndex + slides.length) % slides.length;
+        updateSlide();
+    };
+
+    const restartAuto = () => {
+        clearInterval(autoTimer);
+        autoTimer = setInterval(() => goTo(index + 1), 5000);
+    };
+
+    prevBtn.addEventListener("click", () => {
+        goTo(index - 1);
+        restartAuto();
+    });
+
+    nextBtn.addEventListener("click", () => {
+        goTo(index + 1);
+        restartAuto();
+    });
+
+    carousel.addEventListener("touchstart", (event) => {
+        startX = event.touches[0].clientX;
+        currentX = startX;
+        isDragging = true;
+    }, { passive: true });
+
+    carousel.addEventListener("touchmove", (event) => {
+        if (!isDragging) return;
+        currentX = event.touches[0].clientX;
+    }, { passive: true });
+
+    carousel.addEventListener("touchend", () => {
+        if (!isDragging) return;
+        const deltaX = currentX - startX;
+        const threshold = 40;
+
+        if (deltaX > threshold) {
+            goTo(index - 1);
+            restartAuto();
+        } else if (deltaX < -threshold) {
+            goTo(index + 1);
+            restartAuto();
+        }
+
+        isDragging = false;
+    });
+
+    updateSlide();
+    restartAuto();
+})();
+</script>
+
 </body></html>
