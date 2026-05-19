@@ -253,10 +253,12 @@
 <!-- Dashboard Preview Card -->
 <div class="relative bg-surface rounded-2xl border border-outline-variant/20 soft-shadow p-2 shadow-2xl h-[500px] overflow-hidden">
 <div class="relative h-full bg-surface-bright rounded-xl overflow-hidden" id="how-it-works-media">
-<img alt="Dashboard Interface" class="absolute inset-0 w-full h-full object-cover object-top z-10" id="how-it-works-loader" src="images/finash-homepage-how-it-works-global-payment-process-overview.png"/>
-<video aria-label="How it works walkthrough" class="w-full h-full object-cover object-top opacity-0 transition-opacity duration-500" id="how-it-works-video" loop muted playsinline preload="auto">
-<source src="videos/finash-homepage-how-it-works-global-payment-process-overview-720p.mp4" type="video/mp4"/>
+<video aria-label="How it works walkthrough" class="w-full h-full object-cover object-top" id="how-it-works-video" playsinline preload="metadata">
+<source src="videos/testimonial-1.mp4" type="video/mp4"/>
 </video>
+<button aria-label="Play testimonial video" class="absolute inset-0 z-10 flex items-center justify-center bg-black/20 hover:bg-black/30 transition-colors" id="how-it-works-play">
+<span class="material-symbols-outlined text-white text-7xl drop-shadow-lg">play_circle</span>
+</button>
 </div>
 </div>
 </div>
@@ -388,30 +390,31 @@
 <script>
   (function () {
     const video = document.getElementById('how-it-works-video');
-    const loaderImage = document.getElementById('how-it-works-loader');
+    const playButton = document.getElementById('how-it-works-play');
 
-    if (!video || !loaderImage) return;
+    if (!video || !playButton) return;
 
-    const revealVideo = async () => {
+    const playOnce = async () => {
+      video.currentTime = 0;
       try {
         await video.play();
+        return true;
       } catch (error) {
-        // If autoplay is blocked, keep the loader image in place as fallback.
-        return;
+        return false;
       }
-
-      video.classList.remove('opacity-0');
-      loaderImage.classList.add('hidden');
     };
 
-    video.addEventListener('loadeddata', revealVideo, { once: true });
-
-    video.addEventListener('error', () => {
-      video.classList.add('hidden');
-      loaderImage.classList.remove('hidden');
+    playButton.addEventListener('click', async () => {
+      playButton.classList.add('hidden');
+      const started = await playOnce();
+      if (!started) {
+        playButton.classList.remove('hidden');
+      }
     });
 
-    video.load();
+    video.addEventListener('ended', () => {
+      playButton.classList.remove('hidden');
+    });
   })();
 </script>
 
