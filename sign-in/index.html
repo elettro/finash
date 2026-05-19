@@ -103,8 +103,23 @@
     </script>
 </head>
 <body class="bg-background text-on-background min-h-screen flex flex-col font-body-md">
-<!-- Note: TopNavBar is suppressed because this is a transactional page (Sign In), as per semantic shell mandate. -->
-<main class="flex-grow flex items-center justify-center py-margin-page px-gutter md:px-margin-page relative overflow-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.05)] border-b border-outline-variant/20">
+<div class="flex justify-start items-center h-20 px-10 max-w-container-max mx-auto">
+<a class="text-headline-md font-headline-md text-primary dark:text-inverse-primary" href="/finash/index.html"><img alt="Finash Logo" class="h-8 w-auto object-contain" src="../images/finash-logo-header.svg"/></a>
+</div>
+</nav>
+<!-- Global Navigation Strip -->
+<div class="fixed top-20 w-full z-40 bg-surface-container-low border-b border-outline-variant/40">
+<div class="max-w-container-max mx-auto px-10 h-12 flex items-center gap-6 text-label-md">
+<a class="text-primary font-semibold hover:opacity-80" href="/finash/index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/contact/index.html">Contact</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/sign-in/index.html">Sign In</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/register/index.html">Register</a>
+</div>
+</div>
+<main class="flex-grow flex items-center justify-center py-margin-page px-gutter md:px-margin-page relative overflow-hidden pt-40">
 <!-- Ambient Background decoration -->
 <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
 <div class="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] rounded-full bg-primary-container/10 blur-[120px]"></div>
