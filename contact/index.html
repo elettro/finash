@@ -104,21 +104,21 @@
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col pt-32">
 <!-- TopNavBar -->
-<header class="bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/20 shadow-sm">
-<div class="flex justify-between items-center h-20 px-10 max-w-container-max mx-auto">
-<a class="flex items-center" href="/finash/index.html">
-<img alt="Finash Logo" class="h-10 w-auto object-contain" src="../images/finash-logo-header.svg"/>
-</a>
-<nav class="hidden md:flex gap-8">
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="/finash/index.html" >Home</a>
-<a class="font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors hover:opacity-90 duration-200" href="/finash/services/index.html" >Services</a>
-<a class="font-body-md text-body-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1 hover:opacity-90 transition-all duration-200" href="/finash/contact/index.html" >Contact</a>
-</nav>
-<a class="bg-primary text-on-primary font-label-md text-label-md py-2 px-6 rounded-DEFAULT active:scale-95 transition-transform hover:opacity-90 duration-200 shadow-[0_10px_30px_rgba(0,0,0,0.05)] bg-gradient-to-b from-white/5 to-transparent inline-flex items-center" href="/finash/register/index.html">
-                Register
-            </a>
+<nav class="fixed top-0 w-full z-50 bg-[#f3f3f7] border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto h-20 px-10 flex items-center justify-between">
+<a class="shrink-0" href="/finash/index.html"><img alt="Finash Logo" class="h-8 w-auto object-contain" src="../images/finash-logo-header.svg"/></a>
+<div class="hidden md:flex items-center gap-10 font-body-md text-body-md absolute left-1/2 -translate-x-1/2">
+<a class="text-primary font-semibold" href="/finash/index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Developers</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/contact/index.html">Company</a>
 </div>
-</header>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface hover:text-primary" href="/finash/sign-in/index.html">Sign In</a>
+<a class="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-b from-[#3bc1b0] to-[#2bb4a1]" href="/finash/register/index.html">Get Started</a>
+</div>
+</div>
+</nav>
 <main class="flex-grow max-w-container-max mx-auto px-margin-page w-full py-stack-lg flex flex-col gap-stack-lg">
 <!-- Contact Section Two Column -->
 <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
