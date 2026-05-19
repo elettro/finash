@@ -433,20 +433,31 @@
 
     if (!video || !playButton) return;
 
-    let hasPlayed = false;
+    const toggleVideoPlayback = async () => {
+      if (video.ended) {
+        video.currentTime = 0;
+      }
 
-    playButton.addEventListener('click', async () => {
-      if (hasPlayed) return;
+      if (!video.paused) {
+        video.pause();
+        playButton.classList.remove('hidden');
+        return;
+      }
 
       playButton.classList.add('hidden');
-      video.currentTime = 0;
 
       try {
         await video.play();
-        hasPlayed = true;
       } catch (error) {
         playButton.classList.remove('hidden');
       }
+    };
+
+    playButton.addEventListener('click', toggleVideoPlayback);
+    video.addEventListener('click', toggleVideoPlayback);
+
+    video.addEventListener('ended', () => {
+      playButton.classList.remove('hidden');
     });
   })();
 </script>
