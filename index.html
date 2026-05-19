@@ -121,41 +121,21 @@
 </head>
 <body class="bg-background text-on-background font-body-md antialiased pt-32">
 <!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-dim/80 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.05)] border-b border-outline-variant/20">
-<div class="flex justify-between items-center h-20 px-10 max-w-container-max mx-auto">
-<!-- Brand Logo -->
-<a class="text-headline-md font-headline-md text-primary dark:text-inverse-primary hover:opacity-90 transition-all duration-200 active:scale-95 flex items-center gap-2" href="/finash/index.html"><img alt="Finash Logo" class="h-8 w-auto object-contain" src="images/finash-logo-header.svg"/></a>
-<!-- Navigation Links (Desktop) -->
-<div class="hidden md:flex items-center gap-stack-md font-body-md text-body-md">
-<a class="text-primary dark:text-primary-fixed-dim font-semibold" href="/finash/index.html" >Home</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/finash/services/index.html" >Services</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/finash/services/index.html" >Developers</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="/finash/contact/index.html" >Company</a>
+<nav class="fixed top-0 w-full z-50 bg-[#f3f3f7] border-b border-outline-variant/30">
+<div class="max-w-container-max mx-auto h-20 px-10 flex items-center justify-between">
+<a class="shrink-0" href="/finash/index.html"><img alt="Finash Logo" class="h-8 w-auto object-contain" src="images/finash-logo-header.svg"/></a>
+<div class="hidden md:flex items-center gap-10 font-body-md text-body-md absolute left-1/2 -translate-x-1/2">
+<a class="text-primary font-semibold" href="/finash/index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Developers</a>
+<a class="text-on-surface-variant hover:text-primary" href="/finash/contact/index.html">Company</a>
 </div>
-<!-- Trailing Action -->
-<div class="hidden md:flex items-center gap-4">
-<a class="text-on-surface hover:text-primary font-label-md transition-colors" href="/finash/sign-in/index.html" >Sign In</a>
-<a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-label-md hover:opacity-90 transition-all duration-200 active:scale-95 bg-gradient-to-b from-white/10 to-transparent soft-shadow" href="/finash/register/index.html">
-                    Get Started
-                </a>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface hover:text-primary" href="/finash/sign-in/index.html">Sign In</a>
+<a class="inline-flex items-center justify-center px-8 py-3 rounded-xl font-semibold text-white bg-gradient-to-b from-[#3bc1b0] to-[#2bb4a1]" href="/finash/register/index.html">Get Started</a>
 </div>
-<!-- Mobile Menu Toggle (Hidden on Desktop) -->
-<button class="md:hidden text-on-surface hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
 </div>
 </nav>
-<!-- Global Navigation Strip -->
-<div class="w-full bg-surface-container-low border-b border-outline-variant/40">
-  <div class="max-w-container-max mx-auto px-10 h-12 flex items-center gap-6 text-label-md">
-    <a class="text-primary font-semibold hover:opacity-80" href="/finash/index.html">Home</a>
-    <a class="text-on-surface-variant hover:text-primary" href="/finash/services/index.html">Services</a>
-    <a class="text-on-surface-variant hover:text-primary" href="/finash/contact/index.html">Contact</a>
-    <a class="text-on-surface-variant hover:text-primary" href="/finash/sign-in/index.html">Sign In</a>
-    <a class="text-on-surface-variant hover:text-primary" href="/finash/register/index.html">Register</a>
-  </div>
-</div>
-
 <main>
 <!-- Hero Section -->
 <section class="relative pt-24 pb-32 px-margin-page overflow-hidden bg-surface">
