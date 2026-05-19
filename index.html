@@ -342,7 +342,12 @@
 </div>
 </div>
 <div class="flex justify-center lg:justify-end relative">
-<img alt="Wallet App Features" class="w-full max-w-[400px] h-auto object-contain transform rotate-6 hover:rotate-0 transition-transform duration-500 soft-shadow rounded-3xl" src="images/finash-homepage-phone-dark.png"/>
+<div class="w-full max-w-[400px] relative transform rotate-6 hover:rotate-0 transition-transform duration-500 soft-shadow rounded-3xl overflow-hidden">
+<img alt="Wallet App Features" class="wallet-video-fallback w-full h-auto object-contain transition-opacity duration-300" src="images/finash-homepage-phone-dark.png"/>
+<video aria-label="Wallet App Features animation" autoplay class="wallet-feature-video absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300" loop muted playsinline poster="images/finash-homepage-phone-dark.png" preload="auto">
+<source src="videos/1x1-dark-phone-animation.mp4" type="video/mp4"/>
+</video>
+</div>
 </div>
 </div>
 </section>
@@ -462,5 +467,34 @@
   })();
 </script>
 
+
+<script>
+  (function () {
+    const video = document.querySelector('.wallet-feature-video');
+    const fallbackImage = document.querySelector('.wallet-video-fallback');
+
+    if (!video || !fallbackImage) return;
+
+    const revealVideo = async () => {
+      try {
+        await video.play();
+      } catch (error) {
+        return;
+      }
+
+      video.classList.remove('opacity-0');
+      fallbackImage.classList.add('opacity-0');
+    };
+
+    video.addEventListener('canplaythrough', revealVideo, { once: true });
+
+    video.addEventListener('error', () => {
+      video.classList.add('hidden');
+      fallbackImage.classList.remove('opacity-0');
+    });
+
+    video.load();
+  })();
+</script>
 
 </body></html>
